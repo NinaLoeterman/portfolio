@@ -1,3 +1,10 @@
 .App {
   text-align: center;
 }
+
+:root {
+  --main-bg-color: #ffffff;
+  --secondary-bg-color: #ECEFF4;
+  --main-accent-color: #BF616A;
+  --main-text-color: #4C566A;
+}
