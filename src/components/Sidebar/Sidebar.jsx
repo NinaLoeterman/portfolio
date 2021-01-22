@@ -1,7 +1,7 @@
 import React from "react";
-import IconWrapper from "../icons/IconWrapper.jsx";
 import SidebarTitle from "../SidebarTitle/SidebarTitle.jsx";
-import SidebarLinks from '../SidebarLinks/SidebarLinks.jsx';
+import SidebarLinks from "../SidebarLinks/SidebarLinks.jsx";
+import SidebarSocial from "../SidebarSocial/SidebarSocial.jsx";
 import "../Sidebar/Sidebar.styles.css";
 
 const Sidebar = () => {
@@ -9,16 +9,7 @@ const Sidebar = () => {
     <div className={"sidebar"}>
       <SidebarTitle />
       <SidebarLinks />
-
-      <div>
-        <div>-</div>
-        <div>
-          <IconWrapper type="linkedin" />
-        </div>
-        <div>
-          <IconWrapper type="github" />
-        </div>
-      </div>
+      <SidebarSocial />
     </div>
   );
 };
