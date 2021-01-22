@@ -3,8 +3,9 @@
 }
 
 :root {
-  --main-bg-color: #ffffff;
-  --secondary-bg-color: #ECEFF4;
-  --main-accent-color: #BF616A;
-  --main-text-color: #4C566A;
+  --main-bg: #ffffff;
+  --secondary-bg: #ECEFF4;
+  --main-accent: #BF616A;
+  --main-text: #4C566A;
+  --sub-text: #D8DEE9;
 }

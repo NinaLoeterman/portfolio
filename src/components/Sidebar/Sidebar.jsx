@@ -1,17 +1,15 @@
 import React from "react";
 import useSidebar from "./Sidebar.logic";
 import { Link } from "react-router-dom";
-import IconWrapper from '../icons/IconWrapper.jsx';
+import IconWrapper from "../icons/IconWrapper.jsx";
+import MainTitle from "../MainTitle/MainTitle.jsx";
+import "../Sidebar/Sidebar.styles.css";
 
 const Sidebar = () => {
   const { text } = useSidebar();
   return (
-    <div>
-      <div>
-        <div>{text.name}</div>
-        <div>{text.title}</div>
-        <div>{text.description}</div>
-      </div>
+    <div className={"sidebar"}>
+      <MainTitle />
 
       <div>
         <Link to="/about">{text.about}</Link>
@@ -22,8 +20,12 @@ const Sidebar = () => {
 
       <div>
         <div>-</div>
-        <div><IconWrapper type="linkedin"/></div>
-        <div><IconWrapper type="github"/></div>
+        <div>
+          <IconWrapper type="linkedin" />
+        </div>
+        <div>
+          <IconWrapper type="github" />
+        </div>
       </div>
     </div>
   );
