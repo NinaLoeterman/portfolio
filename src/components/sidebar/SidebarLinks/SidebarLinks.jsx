@@ -1,12 +1,9 @@
 import React from "react";
-import { useLocation, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./SidebarLinks.styles.css";
 
 const SidebarLinks = () => {
-  let location = useLocation();
 
-  let isCurrentPage = location.pathname;
-  console.log("iscurrentpage", isCurrentPage);
   const text = {
     about: "about",
     projects: "projects",
@@ -15,7 +12,7 @@ const SidebarLinks = () => {
   };
 
   const linkStyles = "sidebar-links--link semi-bold";
-  const activeLinkStyles = "accent-color";
+  const activeLinkStyles = "sidebar-links--accent";
 
   return (
     <div className="sidebar-links">
