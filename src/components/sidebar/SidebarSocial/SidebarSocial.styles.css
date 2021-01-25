@@ -1,6 +1,4 @@
 .sidebar-social {
-    position: absolute;
-    bottom: 100px;
     display: flex;
     align-items: center;
 }

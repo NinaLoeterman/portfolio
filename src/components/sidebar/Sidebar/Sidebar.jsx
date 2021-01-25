@@ -7,8 +7,10 @@ import "./Sidebar.styles.css";
 const Sidebar = () => {
   return (
     <div className={"sidebar"}>
-      <SidebarTitle />
-      <SidebarLinks />
+      <div>
+        <SidebarTitle />
+        <SidebarLinks />
+      </div>
       <SidebarSocial />
     </div>
   );
