@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Sidebar from "./components/Sidebar/Sidebar";
-import AboutPage from "./components/AboutPage/AboutPage";
+import Sidebar from "./components/sidebar/Sidebar/Sidebar.jsx";
+import AboutPage from "./components/pages/AboutPage/AboutPage.jsx";
 
 function App() {
   return (

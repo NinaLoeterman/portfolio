@@ -1,5 +1,5 @@
 import React from "react";
-import IconWrapper from "../icons/IconWrapper.jsx.js";
+import IconWrapper from "../../icons/IconWrapper.jsx";
 import './SidebarSocial.styles.css';
 
 

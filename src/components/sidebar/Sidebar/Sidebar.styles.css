@@ -8,4 +8,6 @@
     width: 25%;
     height: 100vh;
     border-right: 2px solid var(--sub-text);
+    padding: 30px;
+    color: var(--main-text);
 }

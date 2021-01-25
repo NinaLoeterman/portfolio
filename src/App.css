@@ -4,8 +4,18 @@
 
 :root {
   --main-bg: #ffffff;
-  --secondary-bg: #ECEFF4;
-  --main-accent: #BF616A;
-  --main-text: #4C566A;
-  --sub-text: #D8DEE9;
+  --secondary-bg: #eceff4;
+  --main-accent: #bf616a;
+  --main-text: #4c566a;
+  --sub-text: #d8dee9;
+  --main-font: "Open Sans", sans-serif;
+  --secondary-font: "Ubuntu", sans-serif;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.accent-color {
+  color: var(--main-accent);
 }
