@@ -1,0 +1,14 @@
+.sidebar-social {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-social--hr {
+    height: 1px;
+    background-color: var(--sub-text);
+    width: 100px;
+    margin-right: 20px;
+    margin-left: -30px;
+}
