@@ -1,4 +1,5 @@
 .App {
+  display: flex;
   text-align: center;
 }
 
@@ -14,8 +15,4 @@
 
 .semi-bold {
   font-weight: 600;
-}
-
-.accent-color {
-  color: var(--main-accent);
 }

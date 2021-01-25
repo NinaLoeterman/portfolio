@@ -1,7 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Sidebar from "./components/sidebar/Sidebar/Sidebar.jsx";
 import AboutPage from "./components/pages/AboutPage/AboutPage.jsx";
+import ContactPage from "./components/pages/ContactPage/ContactPage";
+import ProjectsPage from "./components/pages/ProjectsPage/ProjectsPage";
+import ResumePage from "./components/pages/ResumePage/ResumePage";
 
 function App() {
   return (
@@ -10,9 +13,9 @@ function App() {
         <Sidebar />
         <Switch>
           <Route path="/about" component={AboutPage} />
-          <Route path="/projects"></Route>
-          <Route path="/resume"></Route>
-          <Route path="/contact"></Route>
+          <Route path="/projects" component={ProjectsPage} />
+          <Route path="/resume" component={ResumePage} />
+          <Route path="/contact" component={ContactPage} />
         </Switch>
       </Router>
     </div>
