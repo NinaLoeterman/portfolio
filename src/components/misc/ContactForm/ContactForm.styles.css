@@ -1,0 +1,4 @@
+.contact-form--name-inputs {
+    display: flex;
+    justify-content: space-between;
+}

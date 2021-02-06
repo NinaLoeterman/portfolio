@@ -19,3 +19,7 @@
 .semi-bold {
   font-weight: 600;
 }
+
+input {
+  box-sizing: border-box;
+}

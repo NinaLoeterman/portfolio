@@ -1,13 +1,13 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import TextInput from '../TextInput/TextInput.jsx';
+import TextInput from "../TextInput/TextInput.jsx";
+import "./ContactForm.styles.css";
 
 const ContactForm = () => {
   return (
     <div>
-      <h1>Any place in your app!</h1>
       <Formik
-        initialValues={{ firstName: "", lastName: "", email: "", message: "" }}
+        initialValues={{ fullName: "", email: "", message: "" }}
         validate={(values) => {
           const errors = {};
           if (!values.email) {
@@ -28,9 +28,13 @@ const ContactForm = () => {
       >
         {({ isSubmitting }) => (
           <Form>
-            <Field type="text" name="firstName" component={TextInput}/>
-            <Field type="text" name="lastName" component={TextInput}/>
-            <Field type="email" name="email" component={TextInput}/>
+            <Field
+              type="text"
+              name="fullName"
+              component={TextInput}
+              placeholder="full name"
+            />
+            <Field type="email" name="email" component={TextInput} />
             <ErrorMessage name="email" component="div" />
             <Field as="textarea" name="message" />
             <ErrorMessage name="password" component="div" />
