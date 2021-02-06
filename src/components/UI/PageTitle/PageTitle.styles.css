@@ -1,0 +1,6 @@
+.page-title {
+    color: var(--main-accent);
+    font-size: 2rem;
+    font-family: var(--main-font);
+    font-weight: 600;
+}
