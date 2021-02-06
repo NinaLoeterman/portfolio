@@ -11,6 +11,9 @@
   --sub-text: #d8dee9;
   --main-font: "Open Sans", sans-serif;
   --secondary-font: "Ubuntu", sans-serif;
+  --margin-small: 8px;
+  --margin-main: 16px;
+  --margin-large: 32px;
 }
 
 .semi-bold {

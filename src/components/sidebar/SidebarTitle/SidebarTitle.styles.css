@@ -1,22 +1,22 @@
 .sidebar-title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-family: var(--main-font);
-    padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: var(--main-font);
+  padding-bottom: 50px;
 }
 
 .sidebar-title--description {
-    text-align: left;
+  text-align: left;
 }
 
 .sidebar-title--name {
-    font-family: var(--secondary-font);
-    font-size: 2.5rem;
+  font-family: var(--secondary-font);
+  font-size: 2.5rem;
 }
 
 .sidebar-title--title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 5px
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--margin-small);
 }

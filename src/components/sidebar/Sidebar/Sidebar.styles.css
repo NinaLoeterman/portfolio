@@ -7,6 +7,6 @@
     width: 20%;
     height: calc(100vh - 60px);
     border-right: 2px solid var(--sub-text);
-    padding: 30px;
+    padding: var(--margin-large);
     color: var(--main-text);
 }

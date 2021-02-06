@@ -7,6 +7,6 @@
     height: 1px;
     background-color: var(--sub-text);
     width: 100px;
-    margin-right: 20px;
-    margin-left: -30px;
+    margin-right: var(--margin-main);
+    margin-left: -32px;
 }
