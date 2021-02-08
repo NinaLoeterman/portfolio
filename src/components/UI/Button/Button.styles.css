@@ -1,0 +1,14 @@
+.Button {
+    height: 60px;
+    width: 60px;
+    background-color: var(--main-accent);
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    transition: ease-in-out .2s;
+    padding-left: 12px;
+}
+
+.Button:hover {
+    background-color: #a9444e;
+}

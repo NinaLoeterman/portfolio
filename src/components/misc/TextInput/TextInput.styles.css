@@ -18,4 +18,5 @@
 .text-area {
     height: 400px;
     resize: none;
+    padding: var(--margin-main) var(--margin-main);
 }

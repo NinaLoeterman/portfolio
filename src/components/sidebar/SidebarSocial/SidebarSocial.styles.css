@@ -10,3 +10,7 @@
     margin-right: var(--margin-main);
     margin-left: -32px;
 }
+
+.sidebar-social--link {
+    margin: var(--margin-small);
+}

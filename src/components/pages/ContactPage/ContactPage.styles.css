@@ -1,4 +1,6 @@
 .contact-page {
     width: 100%;
     margin: 10%;
+    max-width: 900px;
+    margin: auto;
 }

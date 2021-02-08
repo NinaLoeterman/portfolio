@@ -3,6 +3,7 @@ import { Formik, Form, Field } from "formik";
 import TextInput from "../TextInput/TextInput.jsx";
 import "./ContactForm.styles.css";
 import { SignupSchema } from "./ContactForm.logic";
+import Button from "../../UI/Button/Button.jsx";
 
 const ContactForm = () => {
   return (
@@ -38,9 +39,9 @@ const ContactForm = () => {
               name="message"
               component={TextInput}
             />
-            <button type="submit" disabled={isSubmitting}>
-              Submit
-            </button>
+            <div className="contact-form--submit">
+              <Button type="submit" disabled={isSubmitting} />
+            </div>
           </Form>
         )}
       </Formik>
