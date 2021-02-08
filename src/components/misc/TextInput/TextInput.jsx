@@ -10,23 +10,26 @@ const TextInput = ({
     <div>
       {field.name === "message" ? (
         <textarea
-          className="text-input text-area"
+          className={`text-input text-area ${
+            touched[field.name] && errors[field.name] && "text-input--error"
+          }`}
           placeholder={props.placeholder}
           {...field}
           {...props}
         />
       ) : (
         <input
-          className="text-input"
+          className={`text-input ${
+            touched[field.name] && errors[field.name] && "text-input--error"
+          }`}
           placeholder={props.placeholder}
           {...field}
           {...props}
         />
       )}
-
-      {touched[field.name] && errors[field.name] && (
-        <div className="error">{errors[field.name]}</div>
-      )}
+      <div className="text-input--div-error">
+        {touched[field.name] && errors[field.name] ? errors[field.name] : ""}
+      </div>
     </div>
   );
 

@@ -2,7 +2,7 @@ import React from 'react';
 import * as Yup from 'yup';
 
 export const SignupSchema = Yup.object().shape({
-  fullName: Yup.string()
+  name: Yup.string()
     .min(2, 'enter you name')
     .max(100, 'Too Long!')
     .required('Required'),

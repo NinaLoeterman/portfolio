@@ -9,7 +9,7 @@ const ContactForm = () => {
   return (
     <div>
       <Formik
-        initialValues={{ fullName: "", email: "", message: "" }}
+        initialValues={{ name: "", email: "", message: "" }}
         validationSchema={SignupSchema}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
@@ -22,9 +22,9 @@ const ContactForm = () => {
           <Form>
             <Field
               type="text"
-              name="fullName"
+              name="name"
               component={TextInput}
-              placeholder="full name"
+              placeholder="name"
             />
             <Field
               type="email"
