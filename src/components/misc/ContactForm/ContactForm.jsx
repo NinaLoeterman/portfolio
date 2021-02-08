@@ -1,20 +1,8 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field } from "formik";
 import TextInput from "../TextInput/TextInput.jsx";
 import "./ContactForm.styles.css";
-import * as Yup from 'yup';
-
-const SignupSchema = Yup.object().shape({
-  fullName: Yup.string()
-    .min(2, 'enter you name')
-    .max(100, 'Too Long!')
-    .required('Required'),
-  message: Yup.string()
-    .min(2, 'leave a message')
-    .max(1000, 'Too Long!')
-    .required('Required'),
-  email: Yup.string().email('Invalid email').required('Required'),
-});
+import { SignupSchema } from "./ContactForm.logic";
 
 const ContactForm = () => {
   return (
@@ -37,10 +25,19 @@ const ContactForm = () => {
               component={TextInput}
               placeholder="full name"
             />
-            <Field type="email" placeholder="email" name="email" component={TextInput} />
-            <ErrorMessage name="email" component="div" />
-            <Field as="textarea" name="message" />
-            <ErrorMessage name="password" component="div" />
+            <Field
+              type="email"
+              placeholder="email"
+              name="email"
+              component={TextInput}
+            />
+            <Field
+              as="textarea"
+              placeholder="leave me a message"
+              type={"textarea"}
+              name="message"
+              component={TextInput}
+            />
             <button type="submit" disabled={isSubmitting}>
               Submit
             </button>

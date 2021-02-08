@@ -9,4 +9,5 @@
     border-right: 2px solid var(--sub-text);
     padding: var(--margin-large);
     color: var(--main-text);
+    height: 100%;
 }
