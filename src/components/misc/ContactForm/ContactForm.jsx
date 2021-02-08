@@ -2,23 +2,26 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import TextInput from "../TextInput/TextInput.jsx";
 import "./ContactForm.styles.css";
+import * as Yup from 'yup';
+
+const SignupSchema = Yup.object().shape({
+  fullName: Yup.string()
+    .min(2, 'enter you name')
+    .max(100, 'Too Long!')
+    .required('Required'),
+  message: Yup.string()
+    .min(2, 'leave a message')
+    .max(1000, 'Too Long!')
+    .required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+});
 
 const ContactForm = () => {
   return (
     <div>
       <Formik
         initialValues={{ fullName: "", email: "", message: "" }}
-        validate={(values) => {
-          const errors = {};
-          if (!values.email) {
-            errors.email = "Required";
-          } else if (
-            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-          ) {
-            errors.email = "Invalid email address";
-          }
-          return errors;
-        }}
+        validationSchema={SignupSchema}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
@@ -34,7 +37,7 @@ const ContactForm = () => {
               component={TextInput}
               placeholder="full name"
             />
-            <Field type="email" name="email" component={TextInput} />
+            <Field type="email" placeholder="email" name="email" component={TextInput} />
             <ErrorMessage name="email" component="div" />
             <Field as="textarea" name="message" />
             <ErrorMessage name="password" component="div" />
