@@ -6,7 +6,7 @@ import "./Sidebar.styles.css";
 
 const Sidebar = () => {
   return (
-    <div className={"sidebar"}>
+    <div className={"sidebar"} data-testid="sidebar">
       <div>
         <SidebarTitle />
         <SidebarLinks />
