@@ -5,7 +5,7 @@ import "./ContactForm.styles.css";
 import { SignupSchema } from "./ContactForm.logic";
 import Button from "../../UI/Button/Button.jsx";
 
-const ContactForm = () => {
+const ContactForm = ({ setIsMessageSent }) => {
   return (
     <div>
       <Formik
@@ -15,6 +15,7 @@ const ContactForm = () => {
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
             setSubmitting(false);
+            setIsMessageSent(true)
           }, 400);
         }}
       >
