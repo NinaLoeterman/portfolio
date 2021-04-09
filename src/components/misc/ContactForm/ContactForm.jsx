@@ -12,11 +12,8 @@ const ContactForm = ({ setIsMessageSent }) => {
         initialValues={{ name: "", email: "", message: "" }}
         validationSchema={SignupSchema}
         onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-            setIsMessageSent(true)
-          }, 400);
+          setSubmitting(false);
+          setIsMessageSent(true);
         }}
       >
         {({ isSubmitting }) => (

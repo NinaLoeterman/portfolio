@@ -9,10 +9,10 @@ const ContactPage = () => {
   return (
     <div className="contact-page">
       {!isMessageSent ? (
-        <>
+        <div data-testid="contact-page">
           <PageTitle title="be in touch" />
           <ContactForm setIsMessageSent={setIsMessageSent} />
-        </>
+        </div>
       ) : (
         <MessageSuccessPage />
       )}
