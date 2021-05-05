@@ -6,7 +6,7 @@
     min-width: 300px;
     width: 20%;
     height: calc(100vh - 60px);
-    border-right: 2px solid var(--sub-text);
+    border-right: 2px solid var(--secondary-bg);
     padding: var(--margin-large);
     color: var(--main-text);
     height: 100%;
