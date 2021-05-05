@@ -1,6 +1,14 @@
 .contact-page {
     width: 100%;
     margin: 10%;
-    max-width: 900px;
     margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-page-container {
+    margin: 20px;
+    min-width: 60%;
+    max-width: 700px;
+    max-height: 700px;
 }

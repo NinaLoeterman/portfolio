@@ -15,7 +15,7 @@
 }
 
 .text-area {
-    height: 400px;
+    min-height: 200px;
     resize: none;
     padding: var(--margin-main) var(--margin-main);
 }
