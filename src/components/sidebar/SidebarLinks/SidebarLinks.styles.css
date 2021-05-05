@@ -12,6 +12,10 @@
     margin: var(--margin-small) 0px;
 }
 
+.sidebar-links--link:hover {
+    color: var(--main-accent);
+}
+
 .sidebar-links--accent {
     color: var(--main-accent)
 }
