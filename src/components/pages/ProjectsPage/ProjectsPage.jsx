@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import ProjectCard from "../../UI/ProjectCard/ProjectCard.jsx";
+import axios from "axios";
 
 const ProjectsPage = () => {
-    return ( 
-        <div>projects</div>
-     );
-}
- 
+  const [projects, setProjects] = useState();
+
+  const getProjects = async () => {
+    const githubProjects = await axios.get(
+      "https://api.github.com/users/ninaloeterman/repos"
+    );
+    setProjects(githubProjects.data);
+  };
+
+  useEffect(() => {
+    getProjects();
+  }, []);
+
+  return <div>{projects && projects.map((project) => <ProjectCard key={project.id} project={project} />)}</div>;
+};
+
 export default ProjectsPage;
