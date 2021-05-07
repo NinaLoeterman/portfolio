@@ -1,15 +1,23 @@
-import React, { useEffect } from 'react';
-import './ProjectCard.styles.css';
+import React, { useContext, useEffect } from "react";
+import { ProjectContextFunctions } from "../../../store/ProjectContextProvider.jsx";
+import "./ProjectCard.styles.css";
 
-const ProjectCard = ({project}) => {
+const ProjectCard = ({ project }) => {
+  // console.log(ProjectContextFunctions);
+  const { setProject } = useContext(ProjectContextFunctions);
+  useEffect(() => {
+    // console.log(project);
+  }, []);
 
-    useEffect(() => {
-        console.log(project);
-    }, []);
-    
-    return ( 
-        <div className="project-card">{project.name}</div>
-     );
-}
- 
+  const presentProject = () => {
+    setProject(project)
+  };
+
+  return (
+    <div className="project-card" onMouseOver={presentProject}>
+      {project.name}
+    </div>
+  );
+};
+
 export default ProjectCard;
