@@ -13,10 +13,11 @@
 .sidebar-title--name {
   font-family: var(--secondary-font);
   font-size: 2.1rem;
+  margin-bottom: var(--margin-small);
 }
 
 .sidebar-title--title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   margin-bottom: var(--margin-small);
 }

@@ -4,9 +4,9 @@ import './SidebarTitle.styles.css';
 const SidebarTitle = () => {
   const text = {
     name: "nina loeterman",
-    title: "developer",
+    title: "software developer",
     description:
-      "front end and full stack. in my previous life, im a classical violist",
+      "creative thinker. clean coder. classical musician. autodidact. ",
   };
   return (
     <div className="sidebar-title">
