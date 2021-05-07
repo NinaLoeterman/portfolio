@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from "../../UI/ProjectCard/ProjectCard.jsx";
 import axios from "axios";
+import './ProjectsPage.styles.css';
 
 const ProjectsPage = () => {
   const [projects, setProjects] = useState();
@@ -16,7 +17,7 @@ const ProjectsPage = () => {
     getProjects();
   }, []);
 
-  return <div>{projects && projects.map((project) => <ProjectCard key={project.id} project={project} />)}</div>;
+  return <div className="project-page">{projects && projects.map((project) => <ProjectCard key={project.id} project={project} />)}</div>;
 };
 
 export default ProjectsPage;

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import './ProjectCard.styles.css';
 
 const ProjectCard = ({project}) => {
 
@@ -7,7 +8,7 @@ const ProjectCard = ({project}) => {
     }, []);
     
     return ( 
-        <div>{project.name}</div>
+        <div className="project-card">{project.name}</div>
      );
 }
  

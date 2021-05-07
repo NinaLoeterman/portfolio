@@ -1,0 +1,7 @@
+.project-card {
+    height: 200px;
+    width: 400px;
+    border: var(--main-accent) 1px solid;
+    margin: 20px;
+    border-radius: 10px;
+}
