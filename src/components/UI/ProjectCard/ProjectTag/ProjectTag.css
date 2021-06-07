@@ -1,0 +1,5 @@
+.project-tag {
+    display: flex;
+    padding: 0 3px;
+    color: var(--main-text);
+}
