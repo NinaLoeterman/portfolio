@@ -1,5 +1,6 @@
 .projects-list {
     overflow: scroll;
+    height: 100vh;
 }
 
 ::-webkit-scrollbar {

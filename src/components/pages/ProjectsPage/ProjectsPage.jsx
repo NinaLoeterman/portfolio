@@ -5,10 +5,10 @@ import "./ProjectsPage.styles.css";
 
 const ProjectsPage = () => {
   return (
-    <>
+    <div className="projects-page">
       <ProjectsList />
       <ProjectDisplay />
-    </>
+    </div>
   );
 };
 

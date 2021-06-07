@@ -11,7 +11,7 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div className="project-card" onMouseOver={presentProject}>
-      {project.name}
+      <span className='project-card-title'>{project.name}</span>
     </div>
   );
 };

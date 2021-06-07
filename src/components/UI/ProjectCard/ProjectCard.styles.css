@@ -1,7 +1,16 @@
 .project-card {
-    height: 200px;
+    height: 100px;
     width: 350px;
-    border: var(--main-accent) 1px solid;
+    border: var(--sub-text) 1px solid;
     margin: 20px;
     border-radius: 10px;
+    display: flex;
+}
+
+.project-card-title {
+    font-family: var(--secondary-font);
+    padding: var(--margin-small);
+    font-size: 2rem;
+    color: var(--main-text);
+    text-align: left;
 }
