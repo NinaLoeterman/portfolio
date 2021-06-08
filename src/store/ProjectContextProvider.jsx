@@ -6,10 +6,6 @@ export const ProjectContextFunctions = createContext();
 export const ProjectContextProvider = ({ children }) => {
   const [project, setProject] = useState({});
 
-  useEffect(() => {
-    console.log(project);
-  }, [project]);
-
   const context = { project };
   const contextFunctions = useRef({ setProject });
 

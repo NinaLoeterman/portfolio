@@ -10,17 +10,13 @@ const ProjectCard = ({ project }) => {
     setProject(project);
   };
 
-  useEffect(() => {
-    console.log(project);
-  }, []);
-
   return (
     <div className="project-card" onMouseOver={presentProject}>
       <div className="project-card-inner">
         <span className="project-card-title">{project.name}</span>
         <div className="project-card-topics">
           {project.topics.map((topic) => (
-            <ProjectTag title={topic}/>
+            <ProjectTag key={topic} title={topic}/>
           ))}
         </div>
       </div>
