@@ -21,8 +21,3 @@
     color: var(--main-text);
     text-align: left;
 }
-
-.project-card-topics {
-    display: flex;
-    flex-wrap: wrap;
-}
