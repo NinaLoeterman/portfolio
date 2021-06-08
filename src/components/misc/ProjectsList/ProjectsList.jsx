@@ -22,7 +22,7 @@ const ProjectsList = () => {
     <div className="projects-list">
       {projects &&
         projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} projectblah={project} />
         ))}
     </div>
   );

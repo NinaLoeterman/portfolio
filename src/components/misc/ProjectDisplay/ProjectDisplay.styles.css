@@ -3,10 +3,17 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    width: 35vw;
 }
 
 .project-display-name {
     font-size: 3rem;
     color: var(--main-text);
     font-family: var(--secondary-font);
+}
+
+.project-display-gif {
+    border-radius: var(--margin-small);
+    width: 100%;
+    margin: var(--margin-large) 0;
 }

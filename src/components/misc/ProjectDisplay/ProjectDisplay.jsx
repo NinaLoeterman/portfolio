@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { ProjectContext } from "../../../store/ProjectContextProvider.jsx";
-import TopicsList from '../../UI/TopicsList/TopicsList.jsx';
+import TopicsList from "../../UI/TopicsList/TopicsList.jsx";
+import Button from "../../UI/Button/Button.jsx";
 import "./ProjectDisplay.styles.css";
 
 const ProjectDisplay = () => {
@@ -10,16 +11,20 @@ const ProjectDisplay = () => {
     console.log(project);
   }, [project]);
 
+  const navigate = () => {
+    window.open(project.html_url, "_blank");
+  };
+
   return (
     <>
       {project.id && (
         <div className="project-display">
           <div className="project-display-name">{project.name}</div>
-          <TopicsList topics={project.topics}/>
-          {project.homepage && <img src={project.homepage} />}
-          <a href={project.html_url} target="_blank">
-            <button>view source code</button>
-          </a>
+          <TopicsList topics={project.topics} />
+          {project.homepage && (
+            <img className="project-display-gif" src={project.homepage} />
+          )}
+          <Button title="view source code" icon='source' onClick={navigate} />
         </div>
       )}
     </>

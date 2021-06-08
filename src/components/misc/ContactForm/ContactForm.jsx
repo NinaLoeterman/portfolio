@@ -38,7 +38,7 @@ const ContactForm = ({ setIsMessageSent }) => {
               component={TextInput}
             />
             <div className="contact-form--submit">
-              <Button type="submit" disabled={isSubmitting} />
+              <Button type="submit" icon="send" disabled={isSubmitting} />
             </div>
           </Form>
         )}

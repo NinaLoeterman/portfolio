@@ -1,6 +1,7 @@
 .projects-list {
     overflow: scroll;
     height: 100vh;
+    margin: var(--margin-main);
 }
 
 ::-webkit-scrollbar {
