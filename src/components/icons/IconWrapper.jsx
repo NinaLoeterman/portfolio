@@ -4,6 +4,7 @@ import LinkedInIcon from "./LinkedInIcon";
 import MediumIcon from "./MediumIcon";
 import SendIcon from "./SendIcon";
 import TagIcon from "./TagIcon.jsx";
+import SourceIcon from "./SourceIcon.jsx";
 import "./IconWrapper.styles.css";
 
 const IconWrapper = (props) => {
@@ -15,6 +16,7 @@ const IconWrapper = (props) => {
     medium: (props) => <MediumIcon {...props} />,
     send: (props) => <SendIcon {...props} />,
     tag: (props) => <TagIcon {...props} />,
+    source: (props) => <SourceIcon {...props} />,
   };
 
   const toggleHover = (fill) => {
