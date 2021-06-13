@@ -1,4 +1,9 @@
-.project-card-topics {
-    display: flex;
-    flex-wrap: wrap;
+.topics-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topics-list-large {
+    font-size: 1.3rem;
+    color: var(--main-text);
 }

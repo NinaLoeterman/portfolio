@@ -1,7 +1,5 @@
 .project-card {
-  height: 100px;
   width: 350px;
-  border: var(--sub-text) 1px solid;
   margin: 20px;
   border-radius: 10px;
   color: var(--main-text);
@@ -24,7 +22,7 @@
 
 .isActive {
   background-color: var(--main-accent);
-  border: var(--main-active) 1px solid;
+  /* border: var(--main-active) 1px solid; */
   color: var(--main-bg);
   animation: 0.4s active;
 }
@@ -32,13 +30,11 @@
 @keyframes active {
   from {
     background-color: white;
-    border: var(--sub-text) 1px solid;
     color: var(--main-text);
   }
 
   to {
     background-color: var(--main-accent);
-    border: var(--main-active) 1px solid;
     color: (var--main-bg);
   }
 }

@@ -20,11 +20,15 @@ const ProjectDisplay = () => {
       {project.id && (
         <div className="project-display">
           <div className="project-display-name">{project.name}</div>
-          <TopicsList topics={project.topics} />
+          <TopicsList size="large" topics={project.topics} />
           {project.homepage && (
-            <img className="project-display-gif" src={project.homepage} />
+            <img
+              alt="github-gif"
+              className="project-display-gif"
+              src={project.homepage}
+            />
           )}
-          <Button title="view source code" icon='source' onClick={navigate} />
+          <Button title="view source code" icon="source" onClick={navigate} />
         </div>
       )}
     </>
