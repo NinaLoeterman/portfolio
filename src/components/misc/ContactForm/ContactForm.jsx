@@ -4,13 +4,11 @@ import TextInput from "../TextInput/TextInput.jsx";
 import "./ContactForm.styles.css";
 import { SignupSchema } from "./ContactForm.logic";
 import Button from "../../UI/Button/Button.jsx";
-import axios from 'axios';
+import useAxios from '../../API/useAxios.jsx';
 
 const ContactForm = ({ setIsMessageSent }) => {
 
-  const sendData = async (message) => {
-    await axios.post(`${process.env.REACT_APP_SERVER}/messages`, message)
-  }
+  const { sendRequest } = useAxios();
 
   return (
     <div>
@@ -18,7 +16,7 @@ const ContactForm = ({ setIsMessageSent }) => {
         initialValues={{ name: "", email: "", message: "" }}
         validationSchema={SignupSchema}
         onSubmit={(values, { setSubmitting }) => {
-          sendData(values)
+          sendRequest('post', '/messages', values)
           setSubmitting(false);
           setIsMessageSent(true);
         }}
