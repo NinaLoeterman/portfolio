@@ -6,7 +6,7 @@ const TextInput = ({
   form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
   ...props
 }) =>
-  console.log(props) || (
+   (
     <div>
       {field.name === "message" ? (
         <textarea

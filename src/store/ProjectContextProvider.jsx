@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useRef } from "react";
+import React, { useState, createContext, useRef } from "react";
 
 export const ProjectContext = createContext();
 export const ProjectContextFunctions = createContext();

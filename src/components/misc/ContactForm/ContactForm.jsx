@@ -4,14 +4,21 @@ import TextInput from "../TextInput/TextInput.jsx";
 import "./ContactForm.styles.css";
 import { SignupSchema } from "./ContactForm.logic";
 import Button from "../../UI/Button/Button.jsx";
+import axios from 'axios';
 
 const ContactForm = ({ setIsMessageSent }) => {
+
+  const sendData = async (message) => {
+    await axios.post(`${process.env.REACT_APP_SERVER}/messages`, message)
+  }
+
   return (
     <div>
       <Formik
         initialValues={{ name: "", email: "", message: "" }}
         validationSchema={SignupSchema}
         onSubmit={(values, { setSubmitting }) => {
+          sendData(values)
           setSubmitting(false);
           setIsMessageSent(true);
         }}
