@@ -1,19 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { ProjectContext } from "../../../store/ProjectContextProvider.jsx";
 import TopicsList from "../../UI/TopicsList/TopicsList.jsx";
-import Button from "../../UI/Button/Button.jsx";
 import "./ProjectDisplay.styles.css";
 
 const ProjectDisplay = () => {
   const { project } = useContext(ProjectContext);
-
-  useEffect(() => {
-    console.log(project);
-  }, [project]);
-
-  const navigate = () => {
-    window.open(project.html_url, "_blank");
-  };
 
   return (
     <>
@@ -22,13 +13,19 @@ const ProjectDisplay = () => {
           <div className="project-display-name">{project.name}</div>
           <TopicsList size="large" topics={project.topics} />
           {project.homepage && (
-            <img
-              alt="github-gif"
-              className="project-display-gif"
-              src={project.homepage}
-            />
+            <div className="image-container">
+              <img
+                alt="github-gif"
+                className='project-display-gif'
+                src={project.homepage}
+              />
+              <div className="after">
+                <a className="project-display-view-source" href={project.html_url} target="_blank" rel="noreferrer">
+                  View Source Code
+                </a>
+              </div>
+            </div>
           )}
-          <Button title="view source code" icon="source" onClick={navigate} />
         </div>
       )}
     </>

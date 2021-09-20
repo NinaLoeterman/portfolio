@@ -5,9 +5,8 @@
     justify-content: space-between;
     min-width: 300px;
     width: 20%;
-    height: calc(100vh - 60px);
     border-right: 1px solid var(--sub-text);
     padding: var(--margin-large);
     color: var(--main-text);
-    height: 100%;
+    height: 100vh;
 }

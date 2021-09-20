@@ -1,15 +1,52 @@
+
 .project-display {
-    margin: 50px;
+    margin: 100px;
     display: flex;
     flex-direction: column;
-    align-items: start;
     width: 35vw;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-display-name {
     font-size: 3rem;
     color: var(--main-text);
     font-family: var(--secondary-font);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+.image-container .after {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 100%;
+    height: 86%;
+    border-radius: 10px;
+
+}
+
+.after {
+    display: none;
+}
+
+.image-container:hover .after {
+    display: block;
+    background: rgba(0, 0, 0, .6);
+    transition: all ease-in-out .2s;
+
+}
+
+.project-display-view-source {
+    color: var(--main-bg);
+    font-size: 2rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .project-display-gif {

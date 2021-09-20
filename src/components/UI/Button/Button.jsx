@@ -2,16 +2,11 @@ import React from "react";
 import IconWrapper from "../../icons/IconWrapper";
 import "./Button.styles.css";
 
-const Button = ({ type, title = "", onClick, icon="" }) => {
+const Button = ({ type, title = "", onClick, icon = "", large, className }) => {
   return (
-    <button
-      data-testid="contact-submit"
-      onClick={onClick}
-      type={type}
-      className="Button"
-    >
+    <button onClick={onClick} type={type} className={`${className} Button ${large && 'Button_large'}`}>
       {title && <div>{title}</div>}
-      <IconWrapper type={icon} />
+      {icon && <IconWrapper type={icon} />}
     </button>
   );
 };

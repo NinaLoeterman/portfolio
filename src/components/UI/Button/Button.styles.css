@@ -9,6 +9,13 @@
     padding-left: 12px;
 }
 
+.Button_large {
+    width: 100%;
+    border-radius:10px;
+    font-size: 2rem;
+    color: white;
+}
+
 .Button:hover {
     background-color: var(--main-hover);
 }
