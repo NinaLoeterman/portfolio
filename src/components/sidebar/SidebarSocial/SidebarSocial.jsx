@@ -16,7 +16,7 @@ const SidebarSocial = () => {
       </a>
       <a
         className="sidebar-social--link"
-        href="https://nina-loeterman.medium.com/using-custom-hooks-to-separate-concerns-in-react-components-70e09ef364a1"
+        href="https://nina-loeterman.medium.com/"
         target="_blank"
         rel="noreferrer"
       >
