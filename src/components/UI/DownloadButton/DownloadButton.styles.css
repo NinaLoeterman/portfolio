@@ -1,0 +1,20 @@
+.download-button {
+  background-color: var(--main-accent);
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: ease-in-out 0.2s;
+}
+
+.download-button:hover {
+  background-color: var(--main-hover);
+}
+
+.download-button-link {
+  color: var(--main-bg);
+  text-decoration: none;
+  font-weight: 700;
+}
