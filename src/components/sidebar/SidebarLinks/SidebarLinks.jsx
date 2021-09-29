@@ -3,11 +3,9 @@ import { NavLink } from "react-router-dom";
 import "./SidebarLinks.styles.css";
 
 const SidebarLinks = () => {
-
   const text = {
     about: "about",
     projects: "projects",
-    resume: "resume",
     contact: "contact",
   };
 
@@ -29,13 +27,6 @@ const SidebarLinks = () => {
         to="/projects"
       >
         {text.projects}
-      </NavLink>
-      <NavLink
-        className={linkStyles}
-        activeClassName={activeLinkStyles}
-        to="/resume"
-      >
-        {text.resume}
       </NavLink>
       <NavLink
         className={linkStyles}
