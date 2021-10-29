@@ -1,16 +1,30 @@
 .sidebar-social {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .sidebar-social--hr {
-    height: 1px;
-    background-color: var(--sub-text);
-    width: 100px;
-    margin-right: var(--margin-main);
-    margin-left: -32px;
+  height: 1px;
+  background-color: var(--sub-text);
+  width: 100px;
+  margin-right: var(--margin-main);
+  margin-left: -32px;
 }
 
 .sidebar-social--link {
-    margin: var(--margin-small);
+  margin: var(--margin-small);
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar-social {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    right: 0px;
+    z-index: 1;
+  }
+
+  .sidebar-social--hr {
+    display: none;
+  }
 }

@@ -9,7 +9,18 @@
   margin: 20px 0;
 }
 
+.about-page-text a {
+  color: var(--main-accent);
+  text-decoration: none;
+}
+
 .about-page-intro {
   font-size: 24px;
   font-weight: 400;
+}
+
+@media screen and (max-width: 600px) {
+  .about-page {
+    padding: var(--margin-large);
+  }
 }

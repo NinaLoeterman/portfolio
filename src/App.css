@@ -9,6 +9,12 @@
   height: 100vh;
 }
 
+@media screen and (max-width: 600px) {
+  .App {
+    flex-direction: column;
+  }
+}
+
 :root {
   --main-bg: #ffffff;
   --secondary-bg: #eceff4;

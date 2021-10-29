@@ -21,3 +21,9 @@
   font-weight: 700;
   margin-bottom: var(--margin-small);
 }
+
+@media screen and (max-width: 600px) {
+  .sidebar-title {
+    padding-bottom: var(--margin-main);
+  }
+}
