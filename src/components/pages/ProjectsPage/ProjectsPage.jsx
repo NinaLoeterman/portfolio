@@ -13,7 +13,13 @@ const ProjectsPage = () => {
       "https://api.github.com/users/ninaloeterman/repos",
       { headers: { Accept: "application/vnd.github.mercy-preview+json" } }
     );
-    setProjects(githubProjects.data);
+    const projectsToShow = filterProjects(githubProjects.data);
+    setProjects(projectsToShow);
+  };
+
+  const filterProjects = (projects) => {
+    const filteredProjects = projects.filter((project) => project.homepage);
+    return filteredProjects;
   };
 
   useEffect(() => {
