@@ -16,5 +16,11 @@
 .download-button-link {
   color: var(--main-bg);
   text-decoration: none;
-  font-weight: 700;
+}
+
+.download-button-download {
+  color: var(--main-accent);
+}
+.download-button-download:hover {
+  color: var(--main-hover);
 }

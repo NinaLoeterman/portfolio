@@ -15,8 +15,9 @@ const AboutPage = () => {
         <Link to="/contact">touch</Link>
         {":)"}
       </div>
-      <div className="about-page-text">Want to check out my resume?</div>
-      <DownloadButton />
+      <div className="about-page-text">
+        Want to check out my resume? <DownloadButton />
+      </div>
     </div>
   );
 };

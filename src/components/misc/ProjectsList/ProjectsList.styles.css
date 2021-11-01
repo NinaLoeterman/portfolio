@@ -1,10 +1,16 @@
 .projects-list {
-    overflow: scroll;
-    height: 100vh;
-    margin: var(--margin-main);
+  overflow: scroll;
+  height: 100vh;
+  margin: var(--margin-main);
 }
 
 ::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
+  width: 0;
+  background: transparent;
+}
+
+@media screen and (max-width: 600px) {
+  .projects-list {
+    margin: 0;
+  }
 }

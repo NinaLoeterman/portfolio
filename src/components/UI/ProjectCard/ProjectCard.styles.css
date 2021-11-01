@@ -1,6 +1,6 @@
 .project-card {
   width: 350px;
-  margin: 20px;
+  margin: var(--margin-main);
   border-radius: 10px;
   color: var(--main-text);
   transition: all 2 ease;
@@ -9,7 +9,8 @@
 .project-card-inner {
   display: flex;
   flex-direction: column;
-  padding: var(--margin-small);
+  padding: var(--margin-main);
+
   height: 100%;
   justify-content: space-around;
 }
@@ -22,7 +23,6 @@
 
 .isActive {
   background-color: var(--main-accent);
-  /* border: var(--main-active) 1px solid; */
   color: var(--main-bg);
   animation: 0.4s active;
 }

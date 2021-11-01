@@ -10,9 +10,7 @@ const DownloadButton = () => {
       target="_blank"
       download
     >
-      <div className="download-button">
-        <span>download</span>
-      </div>
+      <span className="download-button-download">Download it here.</span>
     </Link>
   );
 };
