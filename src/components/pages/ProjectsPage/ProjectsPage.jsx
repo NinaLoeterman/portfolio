@@ -24,7 +24,7 @@ const ProjectsPage = () => {
 
   useEffect(() => {
     getProjects();
-  }, []);
+  });
 
   return (
     <div className="projects-page">
