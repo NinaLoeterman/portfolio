@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useMemo } from "react";
 
 export const MobileContext = createContext();
 
@@ -21,8 +21,11 @@ export const MobileContextProvider = ({ children }) => {
     setIsMobile(width <= 768);
   }, [width]);
 
-  const context = { isMobile };
+  const mobileContext = useMemo(() => ({ isMobile }), [isMobile]);
+
   return (
-    <MobileContext.Provider value={context}>{children}</MobileContext.Provider>
+    <MobileContext.Provider value={mobileContext}>
+      {children}
+    </MobileContext.Provider>
   );
 };
