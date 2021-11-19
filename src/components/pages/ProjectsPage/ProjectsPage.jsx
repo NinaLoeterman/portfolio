@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import ProjectDisplay from "../../misc/ProjectDisplay/ProjectDisplay.jsx";
 import ProjectsList from "../../misc/ProjectsList/ProjectsList.jsx";
 import LoadingPage from "../LoadingPage/LoadingPage.jsx";
+import { MobileContext } from "../../../store/MobileContextProvider.jsx";
 import "./ProjectsPage.styles.css";
 
 const ProjectsPage = () => {
   const [projects, setProjects] = useState([]);
+  const { isMobile } = useContext(MobileContext);
 
   const getProjects = async () => {
     try {
@@ -35,7 +37,7 @@ const ProjectsPage = () => {
       {projects ? (
         <>
           <ProjectsList projects={projects} />
-          <ProjectDisplay />
+          {!isMobile && <ProjectDisplay />}
         </>
       ) : (
         <LoadingPage />

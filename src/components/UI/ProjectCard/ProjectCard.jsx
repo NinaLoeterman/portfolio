@@ -7,9 +7,9 @@ import TopicsList from "../TopicsList/TopicsList.jsx";
 import "./ProjectCard.styles.css";
 
 const ProjectCard = ({ project }) => {
+  const [isActive, setIsActive] = useState();
   const { setProject } = useContext(ProjectContextFunctions);
   const { currentProject } = useContext(ProjectContext);
-  const [isActive, setIsActive] = useState();
 
   const presentProject = () => {
     setProject(project);
