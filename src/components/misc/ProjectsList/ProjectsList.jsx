@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ProjectCard from "../../UI/ProjectCard/ProjectCard.jsx";
 import "./ProjectsList.styles.css";
 
@@ -7,7 +7,7 @@ const ProjectsList = ({ projects }) => {
     <div className="projects-list">
       {projects &&
         projects.map((project) => (
-          <ProjectCard key={project.id} projectblah={project} />
+          <ProjectCard key={project.id} project={project} />
         ))}
     </div>
   );

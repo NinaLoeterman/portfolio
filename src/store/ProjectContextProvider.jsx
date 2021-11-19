@@ -4,9 +4,9 @@ export const ProjectContext = createContext();
 export const ProjectContextFunctions = createContext();
 
 export const ProjectContextProvider = ({ children }) => {
-  const [project, setProject] = useState({});
+  const [currentProject, setProject] = useState({});
 
-  const context = { project };
+  const context = { currentProject };
   const contextFunctions = useRef({ setProject });
 
   return (

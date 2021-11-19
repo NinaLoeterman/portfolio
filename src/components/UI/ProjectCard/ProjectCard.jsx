@@ -6,18 +6,20 @@ import {
 import TopicsList from "../TopicsList/TopicsList.jsx";
 import "./ProjectCard.styles.css";
 
-const ProjectCard = ({ projectblah }) => {
+const ProjectCard = ({ project }) => {
   const { setProject } = useContext(ProjectContextFunctions);
-  const { project } = useContext(ProjectContext);
+  const { currentProject } = useContext(ProjectContext);
   const [isActive, setIsActive] = useState();
 
   const presentProject = () => {
-    setProject(projectblah);
+    setProject(project);
   };
 
   useEffect(() => {
-    projectblah.name === project.name ? setIsActive(true) : setIsActive(false);
-  }, [project]);
+    project.name === currentProject.name
+      ? setIsActive(true)
+      : setIsActive(false);
+  }, [currentProject.name, project.name]);
 
   return (
     <div
@@ -25,8 +27,8 @@ const ProjectCard = ({ projectblah }) => {
       onMouseOver={presentProject}
     >
       <div className="project-card-inner">
-        <span className="project-card-title">{projectblah.name}</span>
-        <TopicsList topics={projectblah.topics} />
+        <span className="project-card-title">{project.name}</span>
+        <TopicsList topics={project.topics} />
       </div>
     </div>
   );
