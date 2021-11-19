@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 const useAxios = () => {
@@ -7,7 +7,6 @@ const useAxios = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   const sendRequest = async (method, url, data) => {
-
     const config = {
       baseURL: process.env.REACT_APP_SERVER,
       url,

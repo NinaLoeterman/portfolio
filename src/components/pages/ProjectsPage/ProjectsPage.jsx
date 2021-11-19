@@ -6,15 +6,19 @@ import LoadingPage from "../LoadingPage/LoadingPage.jsx";
 import "./ProjectsPage.styles.css";
 
 const ProjectsPage = () => {
-  const [projects, setProjects] = useState();
+  const [projects, setProjects] = useState([]);
 
   const getProjects = async () => {
-    const githubProjects = await axios.get(
-      "https://api.github.com/users/ninaloeterman/repos",
-      { headers: { Accept: "application/vnd.github.mercy-preview+json" } }
-    );
-    const projectsToShow = filterProjects(githubProjects.data);
-    setProjects(projectsToShow);
+    try {
+      const githubProjects = await axios.get(
+        "https://api.github.com/users/ninaloeterman/repos",
+        { headers: { Accept: "application/vnd.github.mercy-preview+json" } }
+      );
+      const projectsToShow = filterProjects(githubProjects.data);
+      setProjects(projectsToShow);
+    } catch (e) {
+      console.log("error: ", e);
+    }
   };
 
   const filterProjects = (projects) => {
@@ -24,6 +28,7 @@ const ProjectsPage = () => {
 
   useEffect(() => {
     getProjects();
+    return () => {};
   });
 
   return (

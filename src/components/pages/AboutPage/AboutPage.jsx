@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../../UI/Button/Button.jsx";
 import DownloadButton from "../../UI/DownloadButton/DownloadButton.jsx";
 import "./AboutPage.styles.css";
 
