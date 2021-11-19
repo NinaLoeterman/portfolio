@@ -28,8 +28,7 @@ const ProjectsPage = () => {
 
   useEffect(() => {
     getProjects();
-    return () => {};
-  });
+  }, []);
 
   return (
     <div className="projects-page">
