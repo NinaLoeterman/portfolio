@@ -4,12 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ProjectContextProvider } from "./store/ProjectContextProvider";
+import { MobileContextProvider } from "./store/MobileContextProvider";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProjectContextProvider>
-      <App />
-    </ProjectContextProvider>
+    <MobileContextProvider>
+      <ProjectContextProvider>
+        <App />
+      </ProjectContextProvider>
+    </MobileContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
