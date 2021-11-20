@@ -17,5 +17,7 @@
     border-right: none;
     padding-bottom: 0;
     height: initial;
+    padding: var(--margin-main);
+    padding-bottom: 0;
   }
 }

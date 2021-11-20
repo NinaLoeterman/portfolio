@@ -12,5 +12,7 @@
 @media screen and (max-width: 600px) {
   .projects-list {
     margin: 0;
+    height: initial;
+    overflow: inital;
   }
 }

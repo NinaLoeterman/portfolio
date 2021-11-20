@@ -1,5 +1,6 @@
 .about-page {
   padding: 150px;
+  color: var(--main-text);
 }
 
 .about-page-text {
@@ -20,12 +21,12 @@
 }
 
 .about-page-intro {
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 600px) {
   .about-page {
-    padding: var(--margin-large);
+    padding: var(--margin-main);
   }
 }

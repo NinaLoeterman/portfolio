@@ -15,6 +15,6 @@
 
 @media screen and (max-width: 600px) {
   .contact-page-container {
-    width: calc(100vw - (var(--margin-large) * 2));
+    width: calc(100vw - (var(--margin-main) * 2));
   }
 }

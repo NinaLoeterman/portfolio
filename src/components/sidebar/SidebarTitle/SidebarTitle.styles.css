@@ -24,6 +24,6 @@
 
 @media screen and (max-width: 600px) {
   .sidebar-title {
-    padding-bottom: var(--margin-main);
+    padding-bottom: var(--margin-small);
   }
 }
