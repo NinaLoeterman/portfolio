@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./SidebarTitle.styles.css";
 
 const SidebarTitle = () => {
@@ -10,7 +11,9 @@ const SidebarTitle = () => {
 
   return (
     <div className="sidebar-title">
-      <div className="sidebar-title--name">{text.name}</div>
+      <Link to="/" className="sidebar-title--name">
+        {text.name}
+      </Link>
       <div className="sidebar-title--title">{text.title}</div>
       <div className="sidebar-title--description">{text.description}</div>
     </div>
