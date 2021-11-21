@@ -8,7 +8,7 @@ import ProjectsPage from "./components/pages/ProjectsPage/ProjectsPage";
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename='/portfolio'>
         <Sidebar />
         <Switch>
           <Route path="/about" component={AboutPage} />

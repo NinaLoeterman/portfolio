@@ -5,14 +5,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ProjectContextProvider } from "./store/ProjectContextProvider";
 import { MobileContextProvider } from "./store/MobileContextProvider";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <MobileContextProvider>
-      <ProjectContextProvider>
-        <App />
-      </ProjectContextProvider>
-    </MobileContextProvider>
+    <BrowserRouter>
+      <MobileContextProvider>
+        <ProjectContextProvider>
+          <App />
+        </ProjectContextProvider>
+      </MobileContextProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
