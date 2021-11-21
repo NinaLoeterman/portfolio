@@ -7,7 +7,7 @@ import { MobileContext } from "../../../store/MobileContextProvider.jsx";
 import "./ProjectsPage.styles.css";
 
 const ProjectsPage = () => {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState(null);
   const { isMobile } = useContext(MobileContext);
 
   const getProjects = async () => {
