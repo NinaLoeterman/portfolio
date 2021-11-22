@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MessageSuccessPage = () => {
-    return ( <div>message success</div> );
+    return ( <div>message successss</div> );
 }
  
 export default MessageSuccessPage;
